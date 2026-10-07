@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borang Permohonan Kemasukan T1 MMI Tahun 2027 | Maahad Al Mashoor Al Islami</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            #printableSlip { display: block !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen py-6 px-4 md:py-10">
+
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+        
+        <!-- DASHBOARD HEADER (TEKS SAHAJA TANPA LOGO) -->
+        <header class="bg-emerald-900 text-white p-6 md:p-8 text-center border-b-4 border-amber-500">
+            <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide uppercase">
+                Maahad Al Mashoor Al Islami
+            </h1>
+            <p class="text-amber-300 text-lg md:text-xl font-bold mt-2">
+                Borang Permohonan Kemasukan T1 MMI Tahun 2027
+            </p>
+        </header>
+
+        <div class="p-6 md:p-8 space-y-8">
+
+            <!-- MAKLUMAT SYARAT & PANDUAN -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- SYARAT KEMASUKAN -->
+                <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-5 space-y-3">
+                    <h2 class="text-emerald-900 font-extrabold text-base border-b border-emerald-200 pb-2 uppercase tracking-wide">
+                        SYARAT KEMASUKAN
+                    </h2>
+                    <ul class="space-y-2 text-xs md:text-sm text-emerald-950 font-medium">
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold text-emerald-700">1)</span>
+                            <span>LULUS UJIAN KEMASUKAN YANG DIKENDALIKAN OLEH SEKOLAH.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold text-emerald-700">2)</span>
+                            <div>
+                                <span>PELAJAR AKAN DINILAI SECARA:</span>
+                                <ul class="mt-1 pl-2 space-y-1 text-xs text-emerald-900 bg-emerald-100/60 p-2 rounded-lg">
+                                    <li>• <strong>UJIAN BERTULIS:</strong> (1) Bahasa Arab (2) Bahasa Inggeris (3) Matematik</li>
+                                    <li>• <strong>UJIAN LISAN:</strong> BACAAN ALQURAN & HAFAZAN (SURAH DHUHA HINGGA AN-NAS)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold text-emerald-700">3)</span>
+                            <span>HANYA PELAJAR WARGANEGARA TAHUN KELAHIRAN 2014 SAHAJA LAYAK MEMOHON.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- PANDUAN PERMOHONAN KEMASUKAN -->
+                <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 space-y-3">
+                    <h2 class="text-amber-900 font-extrabold text-base border-b border-amber-200 pb-2 uppercase tracking-wide">
+                        PANDUAN PERMOHONAN KEMASUKAN
+                    </h2>
+                    <ol class="space-y-1.5 text-xs md:text-sm text-amber-950 font-medium list-decimal list-inside">
+                        <li>Sila isi form ini dengan lengkap.</li>
+                        <li>Muat turun (Download) borang permohonan kemasukan.</li>
+                        <li>Isi borang permohonan kemasukan dengan lengkap.</li>
+                        <li>Tarikh Permohonan dibuka sehingga <strong>6 November</strong>.</li>
+                        <li>Waris pemohon <strong>WAJIB</strong> menyertai link Whatsapp di bawah untuk maklumat temuduga pelajar.</li>
+                        <li>Tarikh temuduga pada <strong>14 November 2026 (Sabtu)</strong>. Maklumat detail akan dimasukkan dalam group whatsapp.</li>
+                        <li>Bayaran sebanyak <strong>RM10.00</strong> dikenakan semasa penyerahan borang di pejabat sekolah.</li>
+                        <li>Borang Permohonan hendaklah dihantar ke pejabat sekolah sebelum <strong>6 November 2026</strong>.</li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <!-- BORANG PERMOHONAN -->
+            <form id="applicationForm" onsubmit="handleFormSubmit(event)" class="space-y-6 pt-4 border-t border-slate-200">
+                
+                <h2 class="text-xl font-bold text-slate-800 border-b pb-2 uppercase">
+                    MAKLUMAT PEMOHON & WARIS
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- NAMA PELAJAR -->
+                    <div class="md:col-span-2">
+                        <label for="namaPelajar" class="block text-xs font-bold text-slate-700 uppercase mb-1">
+                            NAMA PELAJAR ( Nama Penuh Seperti pada Kad Pengenalan ) <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="namaPelajar" required placeholder="Sila masukkan nama penuh"
+                               class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:outline-none uppercase text-sm font-semibold">
+                    </div>
+
+                    <!-- JANTINA -->
+                    <div>
+                        <label for="jantina" class="block text-xs font-bold text-slate-700 uppercase mb-1">
+                            JANTINA <span class="text-red-500">*</span>
+                        </label>
+                        <select id="jantina" required class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:outline-none text-sm font-semibold">
+                            <option value="">-- Sila Pilih --</option>
+                            <option value="LELAKI">LELAKI</option>
+                            <option value="PEREMPUAN">PEREMPUAN</option>
+                        </select>
+                    </div>
+
+                    <!-- NO KAD PENGENALAN (PELAJAR) -->
+                    <div>
+                        <label for="noKP" class="block text-xs font-bold text-slate-700 uppercase mb-1">
+                            NO KAD PENGENALAN (PELAJAR) <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="noKP" required pattern="[0-9]{12}" maxLength="12" placeholder="Contoh: 140101071234 (12 digit tanpa -)"
+                               class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:outline-none text-sm font-semibold">
+                    </div>
+
+                    <!-- SEKOLAH TERKINI -->
+                    <div class="md:col-span-2">
+                        <label for="sekolahTerkini" class="block text-xs font-bold text-slate-700 uppercase mb-1">
+                            SEKOLAH TERKINI (Sekolah Rendah) <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="sekolahTerkini" required placeholder="Sila masukkan nama sekolah rendah terkini"
+                               class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:outline-none uppercase text-sm font-semibold">
+                    </div>
+
+                    <!-- ALAMAT TERKINI -->
+                    <div class="md:col-span-2">
+                        <label for="alamatTerkini" class="block text-xs font-bold text-slate-700 uppercase mb-1">
+                            ALAMAT TERKINI <span class="text-red-500">*</span>
+                        </label>
+                        <textarea id="alamatTerkini" required rows="3" placeholder="Sila masukkan alamat kediaman terkini"
+                                  class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:outline-none uppercase text-sm font-semibold"></textarea>
+                    </div>
+
+                    <!-- NO TELEFON BAPA -->
+                    <div>
+                        <label for="noTelBapa" class="block text-xs font-bold text-slate-700 uppercase mb-1">
+                            NO TELEFON BAPA <span class="text-red-500">*</span>
+                        </label>
+                        <input type="tel" id="noTelBapa" required placeholder="Contoh: 0123456789"
+                               class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:outline-none text-sm font-semibold">
+                    </div>
+
+                    <!-- NO TELEFON IBU -->
+                    <div>
+                        <label for="noTelIbu" class="block text-xs font-bold text-slate-700 uppercase mb-1">
+                            NO TELEFON IBU <span class="text-red-500">*</span>
+                        </label>
+                        <input type="tel" id="noTelIbu" required placeholder="Contoh: 0198765432"
+                               class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:outline-none text-sm font-semibold">
+                    </div>
+
+                    <!-- LINK WHATSAPP -->
+                    <div class="md:col-span-2 bg-green-50 border border-green-300 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+                        <div>
+                            <h3 class="font-bold text-green-900 text-sm uppercase">LINK WHATSAPP (Sila sertai Group Ini)</h3>
+                            <p class="text-xs text-green-700 mt-0.5">Waris pemohon WAJIB menyertai group ini untuk maklumat temuduga pelajar.</p>
+                        </div>
+                        <a href="https://chat.whatsapp.com/HMvnWaEJjFg0giNG0kNojX" target="_blank" rel="noopener noreferrer"
+                           class="bg-green-600 hover:bg-green-700 text-white font-bold text-xs px-4 py-2.5 rounded-lg shadow transition whitespace-nowrap">
+                            Sertai Group WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- MUAT NAIK FAIL (KEPUTUSAN PBD) -->
+                    <div class="md:col-span-2 bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3">
+                        <label class="block text-xs font-bold text-slate-700 uppercase">
+                            MUAT NAIK FAIL (KEPUTUSAN PBD)
+                        </label>
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                            <input type="file" id="pbdFile" accept=".pdf,.png,.jpg,.jpeg" class="block w-full text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-emerald-600 file:text-white hover:file:bg-emerald-700 cursor-pointer">
+                            <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:285a0db5-d04f-44fb-ba25-7d9d7e74a90d" target="_blank" rel="noopener noreferrer"
+                               class="text-xs text-blue-600 hover:underline font-semibold whitespace-nowrap bg-blue-50 px-3 py-2 rounded border border-blue-200">
+                                Buka Fail Adobe Acrobat PBD
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PERAKUAN -->
+                <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                    <label class="flex items-start space-x-3 cursor-pointer">
+                        <input type="checkbox" id="perakuan" required class="mt-1 h-5 w-5 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500">
+                        <span class="text-xs md:text-sm text-slate-800 font-medium leading-relaxed">
+                            <strong>PERAKUAN:</strong> Saya mengaku bahawa semua maklumat yang diberikan adalah benar dan betul. Sekiranya maklumat didapati palsu, pihak sekolah berhak membatalkan permohonan ini.
+                        </span>
+                    </label>
+                </div>
+
+                <!-- BUTANG HANTAR PERMOHONAN AKTIF -->
+                <div class="text-center pt-2">
+                    <button type="submit" id="btnSubmit" class="bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold text-base md:text-lg px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition duration-200 w-full md:w-auto">
+                        Hantar Permohonan
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- PAPARAN RESIT / AKUAN PENERIMAAN (SELEPAS HANTAR) -->
+            <div id="successReceipt" class="hidden bg-slate-50 border border-emerald-500 rounded-xl p-6 md:p-8 space-y-6">
+                
+                <div class="text-center border-b border-slate-200 pb-4">
+                    <h2 class="text-2xl font-extrabold text-emerald-900 uppercase">Maahad Al Mashoor Al Islami</h2>
+                    <p class="text-sm font-bold text-slate-600 uppercase mt-1">SLIP AKUAN PENERIMAAN PERMOHONAN T1 MMI 2027</p>
+                    <div class="inline-block bg-emerald-100 text-emerald-800 font-bold text-xs px-3 py-1 rounded-full mt-2">
+                        Status: PERMOHONAN BERJAYA DIHANTAR
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg border border-slate-200 space-y-2 text-sm">
+                    <div class="flex justify-between border-b pb-2">
+                        <span class="text-slate-500">No. Rujukan Permohonan:</span>
+                        <span id="resRefNo" class="font-extrabold text-emerald-800">MMI-2027-0000</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-2">
+                        <span class="text-slate-500">Nama Pelajar:</span>
+                        <span id="resNama" class="font-bold text-slate-900 uppercase">-</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-2">
+                        <span class="text-slate-500">No Kad Pengenalan:</span>
+                        <span id="resKP" class="font-bold text-slate-900">-</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-2">
+                        <span class="text-slate-500">Jantina:</span>
+                        <span id="resJantina" class="font-bold text-slate-900">-</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-2">
+                        <span class="text-slate-500">Sekolah Terkini:</span>
+                        <span id="resSekolah" class="font-bold text-slate-900 uppercase">-</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-2">
+                        <span class="text-slate-500">No Telefon Bapa:</span>
+                        <span id="resTelBapa" class="font-bold text-slate-900">-</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-2">
+                        <span class="text-slate-500">No Telefon Ibu:</span>
+                        <span id="resTelIbu" class="font-bold text-slate-900">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Tarikh Temuduga:</span>
+                        <span class="font-bold text-emerald-700">14 November 2026 (Sabtu)</span>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 p-4 rounded-lg border border-amber-200 text-xs text-amber-900 space-y-1">
+                    <p class="font-bold">PERINGATAN MESRA WARIS:</p>
+                    <p>1. Sila bawa bayaran sebanyak <strong>RM10.00</strong> semasa penyerahan borang fizikal di pejabat sekolah sebelum <strong>6 November 2026</strong>.</p>
+                    <p>2. Sila pastikan anda menyertai Group WhatsApp rasmi bagi mendapatkan maklumat detail temuduga.</p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                    <a href="https://chat.whatsapp.com/HMvnWaEJjFg0giNG0kNojX" target="_blank" rel="noopener noreferrer"
+                       class="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold text-xs py-3 rounded-lg text-center shadow">
+                        Sertai Group WhatsApp Waris
+                    </a>
+                    <button onclick="window.location.reload()" class="bg-slate-700 hover:bg-slate-800 text-white font-bold text-xs py-3 px-6 rounded-lg text-center">
+                        Hantar Permohonan Baru
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const isPerakuanChecked = document.getElementById('perakuan').checked;
+
+            if (!isPerakuanChecked) {
+                alert("Sila tandakan kotak Perakuan sebelum menghantar permohonan.");
+                return;
+            }
+
+            // Ambil data borang
+            const nama = document.getElementById('namaPelajar').value.toUpperCase();
+            const jantina = document.getElementById('jantina').value;
+            const noKP = document.getElementById('noKP').value;
+            const sekolah = document.getElementById('sekolahTerkini').value.toUpperCase();
+            const telBapa = document.getElementById('noTelBapa').value;
+            const telIbu = document.getElementById('noTelIbu').value;
+
+            // Jana No Rujukan
+            const refNo = "MMI-2027-" + Math.floor(1000 + Math.random() * 9000);
+
+            // Populate Slip Result
+            document.getElementById('resRefNo').textContent = refNo;
+            document.getElementById('resNama').textContent = nama;
+            document.getElementById('resKP').textContent = noKP;
+            document.getElementById('resJantina').textContent = jantina;
+            document.getElementById('resSekolah').textContent = sekolah;
+            document.getElementById('resTelBapa').textContent = telBapa;
+            document.getElementById('resTelIbu').textContent = telIbu;
+
+            // Sembunyikan Borang, Paparkan Slip
+            document.getElementById('applicationForm').classList.add('hidden');
+            document.getElementById('successReceipt').classList.remove('hidden');
+
+            // Scroll ke atas resit
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
